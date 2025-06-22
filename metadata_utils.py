@@ -31,6 +31,7 @@ def extract_text(file_path, ext):
     if ext == ".pdf":
         text = extract_text_from_pdf(file_path)
         if not text.strip():
+            print("Empty PDF, running OCR...")
             text = extract_text_with_ocr(file_path)
     elif ext == ".docx":
         text = extract_text_from_docx(file_path)
@@ -39,6 +40,7 @@ def extract_text(file_path, ext):
     else:
         raise ValueError("Unsupported file type")
     return text
+
 
 def generate_metadata(text):
     rake = Rake()
