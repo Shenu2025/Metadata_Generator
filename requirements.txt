@@ -1,0 +1,8 @@
+streamlit
+pymupdf
+python-docx
+pdf2image
+pytesseract
+rake-nltk
+spacy
+nltk
